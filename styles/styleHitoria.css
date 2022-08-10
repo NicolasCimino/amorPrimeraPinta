@@ -39,11 +39,14 @@
     "texto-2    texto-2     img-2";
     grid-template-columns: 40%  auto 40%;
     gap: 20px;
+    padding-left: 20px;
+ 
 }
 /********************************************/
 h1{
     text-align: justify;
     margin-bottom: 30px;
+    padding-left: 10px;
 }
 
 
