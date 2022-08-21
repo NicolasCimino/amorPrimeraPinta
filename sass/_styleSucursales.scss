@@ -30,7 +30,7 @@
         "suc-1  suc-2"
         "suc-3  suc-4";
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 45px;
     padding: 40px;
 }
 
@@ -40,7 +40,7 @@
     margin-top: 20px;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .sucursales{
         gap: 35px;
         padding: 25px;
@@ -52,7 +52,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .sucursales{
         display: flex;
         flex-direction: column;
@@ -64,7 +64,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .sucursales{     
         padding: 10px;
     }

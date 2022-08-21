@@ -26,11 +26,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.anchoImg{
-    width:90%;
 
- 
-}
 .grillaHistoria{
     margin-top: 20px;
     display: grid;
@@ -43,14 +39,11 @@
  
 }
 /********************************************/
-h1{
+.tituloHistoria{
     text-align: justify;
     margin-bottom: 30px;
     padding-left: 10px;
 }
-
-
-
 
 /*********** media******/
 @media  screen and (max-width:1024px){
@@ -58,11 +51,7 @@ h1{
         grid-template-areas:
         "img-1      texto-1     texto-1"
         "texto-2    texto-2     img-2";
-        grid-template-columns: 35%  auto 35%;
-    }
-    .anchoImg{
-        width: 90%;
-
+        grid-template-columns: 45%  auto 45%;
     }
 }
 
@@ -71,16 +60,5 @@ h1{
         padding: 10px;
         display: flex;
         flex-direction: column;  
-    }
-    .anchoImg{
-        width: 75%;
-        height: auto;
-    }
-}
-
-@media  screen and (max-width:320px) {
-    .anchoImg{
-        width: 70%;
-        height: auto;
     }
 }

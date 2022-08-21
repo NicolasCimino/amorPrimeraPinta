@@ -1,0 +1,88 @@
+.fuente{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+}
+
+@mixin fonts($weight,$size) {
+    font-weight: $weight;
+    font-size: $size; 
+}
+
+h1
+{
+    @extend .fuente;
+    @include fonts(800,35px );
+    color: rgb(93, 135, 234);    
+    text-align: center;
+}
+
+h2
+{
+    @extend .fuente;
+    @include fonts(700,30px);
+    color: rgb(93, 135, 234); 
+    text-align: center;
+}
+
+h3
+{
+    @extend .fuente;
+    @include fonts(600,26px );
+    color: rgb(93, 135, 234); 
+    text-align: center;
+}
+
+p
+{
+    @extend .fuente;
+    @include fonts(500,18px );
+    margin-top: 15px;
+    word-spacing: 5px;
+    color: rgb(155, 179, 255);
+    
+}
+
+/*********** media ***************/
+
+@media (max-width: 1024px) {
+
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    }
+    
+    @media (max-width: 768px) {
+        h1{
+            font-size: 28px;
+        }
+        h2{
+            font-size: 24px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 16px;
+        }        
+    }
+
+    @media (max-width: 480px) {
+        h1{
+            font-size: 25px;
+        }
+        h2{
+            font-size: 22px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+        }       
+    }

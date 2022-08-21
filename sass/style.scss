@@ -1,0 +1,24 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+   }
+   main {
+    flex-grow: 1;
+   }
+
+   @import "fuentes";
+   @import "styleGeneral";
+   @import "styleHome";
+   @import "styleHistoria";
+   @import "styleProductos";
+   @import "styleSucursales";
+   @import "styleContacto";
+    
+
