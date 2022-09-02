@@ -21,9 +21,24 @@ main {
 
 h1 {
   font-weight: 800;
-  font-size: 35px;
-  color: rgb(93, 135, 234);
+  font-size: 38px;
+  color: rgb(126, 151, 255);
   text-align: center;
+}
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
 }
 
 h2 {
@@ -32,12 +47,42 @@ h2 {
   color: rgb(93, 135, 234);
   text-align: center;
 }
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+}
 
 h3 {
   font-weight: 600;
   font-size: 26px;
-  color: rgb(93, 135, 234);
+  color: rgb(108, 147, 238);
   text-align: center;
+}
+@media (max-width: 1024px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) {
+  h3 {
+    font-size: 16px;
+  }
 }
 
 p {
@@ -45,49 +90,41 @@ p {
   font-size: 18px;
   margin-top: 15px;
   word-spacing: 5px;
-  color: rgb(155, 179, 255);
-}
-
-/*********** media ***************/
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 26px;
-  }
-  h3 {
-    font-size: 22px;
-  }
+  color: rgb(142, 178, 244);
 }
 @media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 20px;
-  }
   p {
     font-size: 16px;
   }
 }
-@media (max-width: 480px) {
-  h1 {
-    font-size: 25px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  h3 {
-    font-size: 18px;
-  }
+@media (max-width: 768px) and (max-width: 480px) {
   p {
     font-size: 14px;
   }
 }
+
+.texto {
+  font-size: 20px;
+  line-height: 38px;
+}
+@media (max-width: 1024px) {
+  .texto {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .texto {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) {
+  .texto {
+    font-size: 14px;
+  }
+}
+
 /******** nav ************/
 nav {
   background: rgb(1, 6, 10);
@@ -187,28 +224,6 @@ footer li a:hover {
 .borde {
   border: 2px solid rgba(255, 255, 186, 0.737);
   border-radius: 5%;
-}
-
-.texto {
-  font-size: 20px;
-  line-height: 38px;
-}
-@media (max-width: 1024px) {
-  .texto {
-    font-size: 18px;
-    line-height: 26px;
-  }
-}
-@media (max-width: 1024px) and (max-width: 768px) {
-  .texto {
-    font-size: 16px;
-    line-height: normal;
-  }
-}
-@media (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) {
-  .texto {
-    font-size: 14px;
-  }
 }
 
 .ajusteAnchoMedia {

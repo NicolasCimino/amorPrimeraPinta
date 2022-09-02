@@ -107,22 +107,6 @@ footer{
     border-radius: 5%;
 }
 
-.texto{
-    font-size: 20px;
-    line-height: 38px;
-    @media (max-width: 1024px) {
-                font-size: 18px;
-                line-height: 26px;
-                @media (max-width: 768px){
-                    font-size: 16px;
-                    line-height: normal;
-                    @media (max-width: 480px){
-                        font-size:14px;
-                    }
-                }
-            }
-}
-
 .ajusteAnchoMedia{
     width: 90%;  
   }

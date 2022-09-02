@@ -3,86 +3,88 @@
     font-style: normal;
 }
 
-@mixin fonts($weight,$size) {
-    font-weight: $weight;
-    font-size: $size; 
-}
-
 h1
 {
     @extend .fuente;
-    @include fonts(800,35px );
-    color: rgb(93, 135, 234);    
+    font-weight: 800;
+    font-size: 38px; 
+    color: rgb(126 151 255);    
     text-align: center;
+    @media (max-width: 1024px) {
+        font-size: 32px;
+        @media (max-width: 768px){
+            font-size: 28px;
+                @media (max-width: 480px){
+                    font-size:25px;
+                }
+        }
+    }
 }
 
 h2
 {
     @extend .fuente;
-    @include fonts(700,30px);
+    font-weight: 700;
+    font-size: 30px; 
     color: rgb(93, 135, 234); 
     text-align: center;
+    @media (max-width: 1024px) {
+        font-size: 26px;
+        @media (max-width: 768px){
+            font-size: 24px;
+                @media (max-width: 480px){
+                    font-size:22px;
+                }
+        }
+    }
 }
 
 h3
 {
     @extend .fuente;
-    @include fonts(600,26px );
-    color: rgb(93, 135, 234); 
+    font-weight: 600;
+    font-size: 26px; 
+    color: rgb(108, 147, 238); 
     text-align: center;
+    @media (max-width: 1024px) {
+        font-size: 22px;
+        @media (max-width: 768px){
+            font-size: 18px;
+                @media (max-width: 480px){
+                    font-size:16px;
+                }
+        }
+    }
 }
 
 p
 {
     @extend .fuente;
-    @include fonts(500,18px );
+    font-weight: 500;
+    font-size: 18px; 
     margin-top: 15px;
     word-spacing: 5px;
-    color: rgb(155, 179, 255);
-    
+    color: rgb(142, 178, 244);
+    @media (max-width: 768px){
+        font-size: 16px;
+             @media (max-width: 480px){
+                font-size:14px;
+            }
+        }
 }
 
-/*********** media ***************/
-
-@media (max-width: 1024px) {
-
-    h1{
-        font-size: 30px;
-    }
-    h2{
-        font-size: 26px;
-    }
-    h3{
-        font-size: 22px;
-    }
-    }
-    
-    @media (max-width: 768px) {
-        h1{
-            font-size: 28px;
-        }
-        h2{
-            font-size: 24px;
-        }
-        h3{
-            font-size: 20px;
-        }
-        p{
+.texto{
+    font-size: 20px;
+    line-height: 38px;
+    @media (max-width: 1024px) {
+        font-size: 18px;
+         line-height: 26px;
+        @media (max-width: 768px){
             font-size: 16px;
-        }        
+            line-height: normal;
+                @media (max-width: 480px){
+                    font-size:14px;
+                }
+        }
     }
-
-    @media (max-width: 480px) {
-        h1{
-            font-size: 25px;
-        }
-        h2{
-            font-size: 22px;
-        }
-        h3{
-            font-size: 18px;
-        }
-        p{
-            font-size: 14px;
-        }       
-    }
+}
