@@ -6,9 +6,9 @@
 h1
 {
     @extend .fuente;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 38px; 
-    color: rgb(126 151 255);    
+    color: rgba(181, 155, 52);    
     text-align: center;
     @media (max-width: 1024px) {
         font-size: 32px;
@@ -24,9 +24,9 @@ h1
 h2
 {
     @extend .fuente;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 30px; 
-    color: rgb(93, 135, 234); 
+    color: rgb(181, 155, 52);   
     text-align: center;
     @media (max-width: 1024px) {
         font-size: 26px;
@@ -42,16 +42,16 @@ h2
 h3
 {
     @extend .fuente;
-    font-weight: 600;
-    font-size: 26px; 
-    color: rgb(108, 147, 238); 
+    font-weight: 700;
+    font-size: 22px; 
+    color: rgb(167, 128, 14);
     text-align: center;
     @media (max-width: 1024px) {
-        font-size: 22px;
+        font-size: 20px;
         @media (max-width: 768px){
             font-size: 18px;
                 @media (max-width: 480px){
-                    font-size:16px;
+                    font-size:18px;
                 }
         }
     }
@@ -63,7 +63,7 @@ p
     font-weight: 500;
     font-size: 18px; 
     margin-top: 15px;
-    word-spacing: 5px;
+    word-spacing: 4px;
     color: rgb(142, 178, 244);
     @media (max-width: 768px){
         font-size: 16px;
@@ -76,6 +76,7 @@ p
 .texto{
     font-size: 20px;
     line-height: 38px;
+    color: rgb(167, 128, 14);  
     @media (max-width: 1024px) {
         font-size: 18px;
          line-height: 26px;
