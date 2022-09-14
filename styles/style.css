@@ -106,18 +106,19 @@ p {
 
 .texto {
   font-size: 20px;
-  line-height: 38px;
-  color: rgb(167, 128, 14);
+  line-height: 30px;
+  font-weight: 600;
+  color: rgb(208, 170, 57);
 }
 @media (max-width: 1024px) {
   .texto {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
   .texto {
-    font-size: 16px;
+    font-weight: 500;
     line-height: normal;
   }
 }
@@ -125,6 +126,12 @@ p {
   .texto {
     font-size: 14px;
   }
+}
+
+.captionTexto {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(142, 178, 244);
 }
 
 /******** nav ************/
@@ -176,6 +183,8 @@ footer {
   background: linear-gradient(45deg, rgb(1, 6, 10) 50%, rgb(5, 26, 45) 75%, rgb(6, 34, 56) 95%);
 }
 footer ul {
+  margin: 0;
+  padding: 5px 5px 5px 15px;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -235,6 +244,11 @@ footer li a:hover {
   border-radius: 50%;
 }
 
+.fondoTexto {
+  background: rgb(1, 6, 10);
+  background: linear-gradient(315deg, rgb(1, 6, 10) 50%, rgb(5, 26, 45) 75%, rgb(6, 34, 56) 95%);
+}
+
 .ajusteAnchoMedia {
   width: 90%;
 }
@@ -268,33 +282,9 @@ footer li a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-around;
 }
-
-.novedades {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.caja {
-  margin-top: 10px;
-  padding: 10px;
-  height: 100%;
-  width: 320px;
-  border: 1px solid rgba(255, 255, 186, 0.49);
-  border-radius: 5%;
-  background: rgb(1, 6, 10);
-  background: linear-gradient(315deg, rgb(1, 6, 10) 50%, rgb(5, 26, 45) 75%, rgb(6, 34, 56) 95%);
-  display: flex;
-  flex-direction: column;
-  transition: all 0.1s ease-in-out;
-  align-items: center;
-}
-
-/********** media******/
 @media (max-width: 768px) {
   .eventos {
     margin-top: 20px;
@@ -302,6 +292,17 @@ footer li a:hover {
     flex-direction: column;
     align-content: center;
   }
+}
+
+.novedades {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+@media (max-width: 768px) {
   .novedades {
     margin-top: 20px;
     display: flex;
@@ -309,6 +310,28 @@ footer li a:hover {
     align-content: center;
   }
 }
+
+.caja {
+  padding: 10px;
+  height: 100%;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 186, 0.49);
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .caja {
+    width: 320px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 480px) {
+  .caja {
+    width: 280px;
+  }
+}
+
 /************** grilla nuestra historia **************/
 .imgHistoria-1 {
   grid-area: img-1;
@@ -317,6 +340,11 @@ footer li a:hover {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .imgHistoria-1 {
+    width: 80%;
+  }
+}
 
 .imgHistoria-2 {
   grid-area: img-2;
@@ -324,6 +352,11 @@ footer li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .imgHistoria-2 {
+    width: 80%;
+  }
 }
 
 .textoHistoria-1 {
@@ -342,11 +375,25 @@ footer li a:hover {
 
 .grillaHistoria {
   margin-top: 20px;
+  padding: 20px;
   display: grid;
-  grid-template-areas: "img-1      texto-1     texto-1" "texto-2    texto-2     img-2";
-  grid-template-columns: 40% auto 40%;
+  grid-template-areas: "img-1     texto-1" "texto-2   img-2";
+  grid-template-columns: 50% 50%;
+  align-items: center;
   gap: 20px;
-  padding-left: 20px;
+}
+@media (max-width: 1024px) {
+  .grillaHistoria {
+    grid-template-areas: "img-1      texto-1     texto-1" "texto-2    texto-2     img-2";
+    grid-template-columns: 45% auto 45%;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .grillaHistoria {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /********************************************/
@@ -356,22 +403,13 @@ footer li a:hover {
   padding-left: 10px;
 }
 
-/*********** media******/
-@media screen and (max-width: 1024px) {
-  .grillaHistoria {
-    grid-template-areas: "img-1      texto-1     texto-1" "texto-2    texto-2     img-2";
-    grid-template-columns: 45% auto 45%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .grillaHistoria {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-}
 .imgTipos {
   grid-area: img-tipos;
+}
+@media (max-width: 768px) {
+  .imgTipos {
+    width: 80%;
+  }
 }
 
 .textoTipos1 {
@@ -385,6 +423,11 @@ footer li a:hover {
 .imgCervezas {
   grid-area: img-cervezas;
 }
+@media (max-width: 768px) {
+  .imgCervezas {
+    display: none;
+  }
+}
 
 .cervezaTipos {
   display: grid;
@@ -393,6 +436,21 @@ footer li a:hover {
   align-items: center;
   padding: 30px 50px 30px;
   gap: 20px;
+}
+@media (max-width: 1024px) {
+  .cervezaTipos {
+    display: grid;
+    grid-template-areas: "img-tipos          texto-tipos1" "texto-tipos2       img-cervezas";
+    grid-template-columns: 50% 50%;
+    padding: 30px;
+    gap: 20px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .cervezaTipos {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .imgProductos {
@@ -403,60 +461,65 @@ footer li a:hover {
   opacity: 0.8;
 }
 
-@media (max-width: 1024px) {
-  .cervezaTipos {
-    display: grid;
-    grid-template-areas: "img-tipos          texto-tipos1" "texto-tipos2       img-cervezas";
-    grid-template-columns: 60% 40%;
-    align-items: center;
-    padding: 30px;
-    gap: 20px;
-  }
-}
 @media (max-width: 768px) {
-  .cervezaTipos {
-    display: flex;
-    flex-direction: column;
-  }
-  .imgCervezas {
-    display: none;
-  }
-  .imgTipos {
-    width: 80%;
-  }
   .descripcion {
     display: none;
   }
 }
 .sucursal {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .sucursal {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+}
+
+.boxSucursal {
+  border: 2px solid rgba(200, 200, 109, 0.877);
+  border-radius: 5%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
 }
 
 .imgSucursal {
-  width: 350px;
+  width: 320px;
   height: 280px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media (max-width: 1024px) {
   .imgSucursal {
-    width: 320px;
+    width: 300px;
     height: 250px;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
   .imgSucursal {
-    width: 320px;
-    height: 250px;
+    width: 280px;
+    height: 240px;
+    margin-top: 0px;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) {
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) {
   .imgSucursal {
-    width: 80%;
+    width: 250px;
     height: auto;
-    margin-top: 10px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 480px) and (max-width: 320px) {
+  .imgSucursal {
+    width: 230px;
+    height: auto;
   }
 }
 

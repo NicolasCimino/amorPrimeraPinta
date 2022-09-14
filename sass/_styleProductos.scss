@@ -1,6 +1,9 @@
 
 .imgTipos{
     grid-area: img-tipos;
+    @media (max-width: 768px) {
+            width: 80%;
+        }
 }
 
 .textoTipos1{
@@ -11,6 +14,9 @@
 }
 .imgCervezas{
     grid-area: img-cervezas;
+    @media (max-width: 768px) {
+            display: none;
+        }
 }
 
 .cervezaTipos{
@@ -21,42 +27,30 @@ grid-template-columns: 45% auto 40%;
 align-items: center;
 padding: 30px 50px 30px;
 gap: 20px;
+@media (max-width: 1024px) {
+        display: grid;
+        grid-template-areas:"img-tipos          texto-tipos1"
+                            "texto-tipos2       img-cervezas";
+        grid-template-columns: 50% 50%;
+        padding: 30px;
+        gap: 20px;
+        @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;    
+            }
+        }
+
 }
 
 .imgProductos{
     width: 100%;
 }
 
-
-
 .imgOpacity{
     opacity: 0.8;
 }
 
-@media (max-width: 1024px) {
-    .cervezaTipos{
-        display: grid;
-        grid-template-areas:"img-tipos          texto-tipos1"
-                            "texto-tipos2       img-cervezas";
-        grid-template-columns: 60% 40%;
-        align-items: center;
-        padding: 30px;
-        gap: 20px;
-        }
-}
-
 @media (max-width: 768px) {
-    .cervezaTipos{
-        display: flex;
-        flex-direction: column;    
-    }
-    .imgCervezas{
-        display: none;
-    }
-    
-    .imgTipos{
-        width: 80%;
-    }
     .descripcion{
        display: none;
     }

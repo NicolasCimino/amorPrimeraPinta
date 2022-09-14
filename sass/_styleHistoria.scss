@@ -5,14 +5,20 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    @media (max-width:768px){
+        width: 80%;
+    }
 }
 .imgHistoria-2{
     grid-area: img-2;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    @media (max-width:768px){
+        width: 80%;
+    }
 }
 .textoHistoria-1{
     grid-area: texto-1;
@@ -29,36 +35,29 @@
 
 .grillaHistoria{
     margin-top: 20px;
+    padding: 20px;
     display: grid;
     grid-template-areas:
-    "img-1      texto-1     texto-1"
-    "texto-2    texto-2     img-2";
-    grid-template-columns: 40%  auto 40%;
+            "img-1     texto-1"
+            "texto-2   img-2";
+    grid-template-columns: 50%  50%;
+    align-items: center;
     gap: 20px;
-    padding-left: 20px;
- 
+    @media (max-width:1024px){
+        grid-template-areas:
+        "img-1      texto-1     texto-1"
+        "texto-2    texto-2     img-2";
+        grid-template-columns: 45%  auto 45%;
+            @media (max-width:768px) {
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;  
+                }
+        }
 }
 /********************************************/
 .tituloHistoria{
     text-align: justify;
     margin-bottom: 30px;
     padding-left: 10px;
-}
-
-/*********** media******/
-@media  screen and (max-width:1024px){
-    .grillaHistoria{
-        grid-template-areas:
-        "img-1      texto-1     texto-1"
-        "texto-2    texto-2     img-2";
-        grid-template-columns: 45%  auto 45%;
-    }
-}
-
-@media  screen and (max-width:768px) {
-    .grillaHistoria{
-        padding: 10px;
-        display: flex;
-        flex-direction: column;  
-    }
 }

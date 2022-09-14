@@ -28,7 +28,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around;
+    @media (max-width:768px) {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
 }
 
 .novedades{
@@ -36,40 +43,29 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around;
+    @media (max-width:768px) {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
 }
 
 .caja{
-    margin-top: 10px;
     padding: 10px;
     height: 100%;
-    width:320px;
+    width: 350px;
+    @media (max-width:1024px){
+        width: 320px;
+        @media (max-width:480px){
+            width: 280px;
+        }
+    } 
     border: 1px solid rgba(255, 255, 186, 0.49);
     border-radius: 5%;
-    background: rgb(1,6,10);
-    background: linear-gradient(315deg, rgba(1,6,10,1) 50%, rgba(5,26,45,1) 75%, rgba(6,34,56,1) 95%);
     display: flex;
     flex-direction: column;
-    transition: all 0.1s ease-in-out;
     align-items: center;
-}
-
-
-/********** media******/
-
-
-@media (max-width:768px) {
-    .eventos{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-    }
-    
-    .novedades{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-    }
 }
